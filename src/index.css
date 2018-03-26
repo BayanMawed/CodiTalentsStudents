@@ -1,0 +1,180 @@
+body, html, #root{
+  height:100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.student{
+  margin-top: 8%;
+  margin-left: 30%;
+  background-color: rgb(61, 61, 61);
+  width: 70%;
+  float: left;
+  /* display: inline; */
+  /* ; */
+}
+.container{
+  width: 100%;
+}
+
+.profile{
+  position: relative;
+  left:200px;
+  height: 100px;
+}
+.filter{
+  width: 30%;
+  position: fixed;
+  background-color: rgb(165, 165, 165);
+  height: 100%;
+  float: left;
+}
+
+
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    width: 129px;
+    background-color: #eee;
+}
+.nav-stacked>li {
+  float: none;
+  width: 130px;
+}
+
+.student-image{
+  width:150px;
+  height:150px;
+  background-size:cover;
+  border-radius:50%;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  overflow:hidden;
+}
+
+.caption:hover{
+    background-color: rgba(4, 50, 71, 0.5);
+}
+@media (min-width: 768px){
+  .col-sm-8{
+    width: 275px;
+  }
+}
+
+.transition-container{
+  perspective:100px;
+  display: block;
+  perspective-origin: 138px center;
+}
+
+.student-enter {
+  opacity: 0.01;
+  transform: translate3d(0,0,50px);
+  overflow:hidden;
+}
+
+.student-enter.student-enter-active {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  transition: all 500ms ease-in;
+}
+
+.student-leave {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  height:500px;
+}
+
+.student-leave.student-leave-active {
+  opacity: 0.01;
+  transform: translate3D(0,0,20px);
+  transition: all 300ms ease-in;
+}
+
+.searchBar input[type=text] {
+  width: 150px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  /* background-color: white; */
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 300px;
+  height: 150px;
+}
+
+.searchBar input[type=text]:focus {
+  width: 100%;
+}
+@media screen and (max-width:1000px){
+  .col-xs-1{
+    width:50%;
+  }
+}
+@media screen and (max-width:675px){
+  .col-xs-1{
+  width:100%;
+  }
+}
+
+.multipleFilters{
+  background-color: rgb(61, 61, 61);
+  color: white;
+  border: 3px pink dotted;
+  text-align: center;
+  height: 105px;
+  width: 70%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  /* float: left; */
+  /* display: block; */
+  /* margin-bottom: 100px; */
+}
+.noResult{
+  color: white;
+  height: 800px;
+}
+
+.block{
+  display: inline-block;
+  margin-right: 5px;
+  background-color: rgb(44, 190, 88);
+  border-radius: 20px;
+  font-size: 20px;
+  width: 120px;
+}
+/* .city-block{
+  margin-left: 50%;
+}
+.skill-block{
+  margin-left: 55%;
+}  
+.available-block{
+  margin-left: 60%;
+} */
+
+
+
+
+.fadeIn-enter {
+  opacity: 0;
+  transition: 0.3s ease-in-out all;
+}
+
+.fadeIn-enter.fadeIn-enter-active {
+  opacity: 1;
+}

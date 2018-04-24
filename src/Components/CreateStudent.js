@@ -28,7 +28,7 @@ const students = [
   create_student('f','nagam', '2', ['drupal','wordpress','html'],'saida'),
   create_student('m','paul', '1', ['html','wordpress'],'jounyeh'),
   create_student('m','saleh', 'available', ['html','css','javascript'],'beirut'),
-  create_student('f','soad', '3', ['node',,'react','wordpress'],'jbeil'),
+  create_student('f','soad', '2', ['html','css','javascript','node','react','meator'],'jbeil'),
   create_student('f','mitza', '1', ['node','html','css','javascript','react'],'beirut'),
 ];
 

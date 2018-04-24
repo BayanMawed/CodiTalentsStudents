@@ -44,6 +44,7 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     <Button onClick={() => setSkillFilter("laravel")}>LARAVEL</Button>
                     <Button onClick={() => setSkillFilter("node")}>NODE JS</Button>
                     <Button onClick={() => setSkillFilter("javascript")}>JAVASCRIPT</Button>
+                    <Button onClick={() => setSkillFilter("meator")}>MEATOR</Button>
                 </ButtonGroup>
             </Tab.Pane>
             <Tab.Pane eventKey="third">

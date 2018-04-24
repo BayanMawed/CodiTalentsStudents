@@ -7,17 +7,40 @@ import students from './Components/CreateStudent';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import FilterSection from './Components/FilterSection';
 
+
+students.map(
+  (student) => {
+    const { name, city, availability, skills, gender } = student
+    const key = [ name, city, availability, gender, skills.join(' ') ].join(' ')
+    student.key = key;
+    student.id = key;
+    return student
+  }
+)
+
 export default class StudentTalent extends Component {
   state = {
     cityFilter: "",
     skillFilter:"",
     availableFilter:"",
     genderFilter:'',
-    search:"",
+    search:'',
     two:false,
     userSelectedList:[],
     show_selected_students:false
   }
+
+  onChange = (evt) => {
+    this.setState({search:evt.target.value})
+  }
+  filterStudents(){
+    const search = this.state.search.trim();
+    if(!search){ return students }
+    const regex = new RegExp(search,'i');
+    return students.filter(student => regex.test(student.key) )
+  }
+
+  
   randomStudentList = (a) => { // Fisher-Yates shuffle, no side effects
     var i = a.length, t, j;
     a = a.slice()
@@ -30,6 +53,7 @@ export default class StudentTalent extends Component {
     return a
   }
   renderFilteredStudents() {
+    const students = this.filterStudents()
     const city = this.state.cityFilter;
     const skill = this.state.skillFilter;
     const available = this.state.availableFilter;
@@ -172,7 +196,10 @@ export default class StudentTalent extends Component {
           setgenderFilter={this.setgenderFilter} 
           showAll={this.showAll} 
           showSelected={this.showSelected} 
-          showTwo={this.showTwo}/>
+          showTwo={this.showTwo}
+          searchValue={this.state.search} 
+          onSearchChange={this.onChange}
+          />
       </div>
       {/* Ends here.... */}
 

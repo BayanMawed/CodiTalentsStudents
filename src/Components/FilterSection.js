@@ -2,12 +2,12 @@ import React from 'react';
 import { Nav, ButtonGroup,NavItem, Row, Tab, Button, Col } from 'react-bootstrap';
 
 
-const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSkillFilter,showAll,showSelected,showTwo}) => (
+const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSkillFilter,showAll,showSelected,showTwo,searchValue,onSearchChange}) => (
 
   <div class="filter">
           
           <div className="searchBar"> 
-              <input  type="text" placeholder="Search for..." />
+              <input  type="text" placeholder="Search for..." onChange={onSearchChange} value={searchValue} />
           </div>
 
     <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -45,6 +45,10 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     <Button onClick={() => setSkillFilter("node")}>NODE JS</Button>
                     <Button onClick={() => setSkillFilter("javascript")}>JAVASCRIPT</Button>
                     <Button onClick={() => setSkillFilter("meator")}>MEATOR</Button>
+                    <Button onClick={() => setSkillFilter("sql")}>SQL</Button>
+                    {/* <Button onClick={() => setSkillFilter("video edior")}>VIDEO EDITOR</Button> */}
+                    <Button onClick={() => setSkillFilter("bootsrap")}>BOOTSRAP</Button>
+                    
                 </ButtonGroup>
             </Tab.Pane>
             <Tab.Pane eventKey="third">

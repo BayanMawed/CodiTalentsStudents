@@ -178,3 +178,7 @@ textarea {
 .fadeIn-enter.fadeIn-enter-active {
   opacity: 1;
 }
+
+.student-name{
+  text-transform: capitalize
+}

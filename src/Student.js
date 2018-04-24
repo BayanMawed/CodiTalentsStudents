@@ -7,17 +7,12 @@ const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
       <Thumbnail >
         {/* <Image src={image} width="150px" height="150px" circle /> */}
         <div className='student-image' style={{ backgroundImage: `url(${image})` }} > </div>
-        <h2>{name}</h2>
+        <h2 className="student-name">{name}</h2>
         <h3>City: {city}</h3>
         <h3>Availability: </h3>
         <p>{availability}</p>
         <h3>Skills: </h3>
         <p>#{skills.join('#')}</p>
-        {/* <p> {skills.map((s) =>
-            <p>#{ ' ' + skills.s}</p>
-          ) 
-        } 
-        </p> */}
         <hr />
         <p>
         {/* <Button bsStyle="primary">See More</Button>&nbsp; */}

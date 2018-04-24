@@ -12,7 +12,7 @@ const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
         <h3>Availability: </h3>
         <p>{availability}</p>
         <h3>Skills: </h3>
-        <p>{skills}</p>
+        <p>#{skills.join(' #')}</p>
         {/* <p> {skills.map((s) =>
             <p>#{ ' ' + skills.s}</p>
           ) 

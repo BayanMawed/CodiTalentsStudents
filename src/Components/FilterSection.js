@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Nav, ButtonGroup,NavItem, Row, Tab, Button, Col } from 'react-bootstrap';
 
 
@@ -32,16 +32,17 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     <Button onClick={() => setCityFilter("jounyeh")}><h4>Jounyeh</h4></Button>
                     <Button onClick={() => setCityFilter("jbeil")}><h4>Jbiel</h4></Button>
                     <Button onClick={() => setCityFilter("tyre")}><h4>Tyre</h4></Button>
+                    <Button onClick={() => setCityFilter("sarafand")}><h4>Sarafand</h4></Button>
                 </ButtonGroup>
             </Tab.Pane>
             <Tab.Pane eventKey="second">
                 <ButtonGroup vertical block>
-                    <Button onClick={() => setSkillFilter("PHP")}>PHP</Button>
-                    <Button onClick={() => setSkillFilter("REACT")}>REACT</Button>
-                    <Button onClick={() => setSkillFilter("WORDPRESS")}>WORDPRESS</Button>
-                    <Button onClick={() => setSkillFilter("DRUPAL")}>DRUPAL</Button>
-                    <Button onClick={() => setSkillFilter("LARAVEL")}>LARAVEL</Button>
-                    <Button onClick={() => setSkillFilter("NODE")}>NODE JS</Button>
+                    <Button onClick={() => setSkillFilter("php")}>PHP</Button>
+                    <Button onClick={() => setSkillFilter("react")}>REACT</Button>
+                    <Button onClick={() => setSkillFilter("wordpress")}>WORDPRESS</Button>
+                    <Button onClick={() => setSkillFilter("drupal")}>DRUPAL</Button>
+                    <Button onClick={() => setSkillFilter("laravel")}>LARAVEL</Button>
+                    <Button onClick={() => setSkillFilter("node")}>NODE JS</Button>
                     <Button onClick={() => setSkillFilter("javascript")}>JAVASCRIPT</Button>
                 </ButtonGroup>
             </Tab.Pane>
@@ -62,10 +63,10 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
               </Button>
             </Tab.Pane>
             <Tab.Pane eventKey="fifth">
-              <Button onClick={() => setgenderFilter("M")} vertical block>
+              <Button onClick={() => setgenderFilter("m")} vertical block>
                 Male
               </Button>
-              <Button onClick={() => setgenderFilter("F")} vertical block>
+              <Button onClick={() => setgenderFilter("f")} vertical block>
                 Female
               </Button>
             </Tab.Pane>

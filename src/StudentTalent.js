@@ -7,7 +7,7 @@ import students from './Components/CreateStudent';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import FilterSection from './Components/FilterSection';
 
-class StudentTalent extends Component {
+export default class StudentTalent extends Component {
   state = {
     cityFilter: "",
     skillFilter:"",
@@ -105,14 +105,14 @@ class StudentTalent extends Component {
      this.setState({userSelectedList})
    };
    OnClickRemove = (student) => {
-    const index = this.state.userSelectedList.indexOf(student)
-    if (index < 0) {
+      const index = this.state.userSelectedList.indexOf(student)
+      if (index < 0) {
       return;
-    }
+      }
       const selected = this.state.userSelectedList.slice();
       selected.splice(index, 1);
       this.setState({ userSelectedList:selected });
-    } 
+  } 
 
   // showAddToList =() => {
   //    let userList = []
@@ -165,8 +165,14 @@ class StudentTalent extends Component {
       {/* Filter Section contains all the html and buttons begins here */}
       <div className="filter">
           
-          <FilterSection setCityFilter={this.setCityFilter} setSkillFilter={this.setSkillFilter}setAvailabileFilter={this.setAvailabileFilter} setgenderFilter={this.setgenderFilter} showAll={this.showAll} showSelected={this.showSelected} showTwo={this.showTwo}/>
-
+          <FilterSection 
+          setCityFilter={this.setCityFilter} 
+          setSkillFilter={this.setSkillFilter}
+          setAvailabileFilter={this.setAvailabileFilter} 
+          setgenderFilter={this.setgenderFilter} 
+          showAll={this.showAll} 
+          showSelected={this.showSelected} 
+          showTwo={this.showTwo}/>
       </div>
       {/* Ends here.... */}
 
@@ -193,15 +199,5 @@ class StudentTalent extends Component {
 }
   
 
-class talentPage extends Component {
-  render() {
-    return (
-      <div>
-      {/* <FilterSection /> */}
-      <StudentTalent />
-      </div>
-    )
-  }
-}
 
-export default talentPage
+

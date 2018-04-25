@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import React, { Component } from 'react';
+import React, { Component, Children } from 'react';
 import { Button, Grid, Row } from 'react-bootstrap';
 import Student from './Student';
 import StudentSelected from './StudentSelected';
@@ -18,8 +18,15 @@ students.map(
   }
 )
 
+const FilterSelected = ({children}) => {
+  return (
+    <h3 className="filterSelected">{children}</h3>
+  )
+}
+
 export default class StudentTalent extends Component {
   state = {
+    isFilterSelected:true,
     cityFilter: "",
     skillFilter:"",
     availableFilter:"",
@@ -87,29 +94,29 @@ export default class StudentTalent extends Component {
  }
  
    setCityFilter = (cityFilter) => {
-     this.setState({ cityFilter ,two:'', show_selected_students:false })
+     this.setState({ cityFilter ,two:'', show_selected_students:false,isFilterSelected:false  })
     };
    removeCityFilter = () => {
     // const cityFilter = this.state.cityFilter
      this.setState({ cityFilter:'' ,two:'', show_selected_students:false })
     };
    setSkillFilter = (skillFilter) => {
-     this.setState({ skillFilter, two:'', show_selected_students:false })
+     this.setState({ skillFilter, two:'', show_selected_students:false,isFilterSelected:false })
     };
    removeSkillFilter = () => {
      this.setState({ skillFilter:'' ,two:'', show_selected_students:false })
     };
    setAvailabileFilter = (availableFilter) => {
-     this.setState({ availableFilter, two:'', show_selected_students:false })
+     this.setState({ availableFilter, two:'', show_selected_students:false,isFilterSelected:false })
     };
    removeAvailabileFilter = () => {
      this.setState({ availableFilter:'' ,two:'', show_selected_students:false })
     };
    setgenderFilter = (genderFilter) => {
-     this.setState({ genderFilter, two:'', show_selected_students:false })
+     this.setState({ genderFilter, two:'', show_selected_students:false,isFilterSelected:false })
     };
    removegenderFilter = () => {
-     this.setState({ genderFilter:'' ,two:'', show_selected_students:false })
+     this.setState({ genderFilter:'' ,two:'', show_selected_students:false, })
     };
    showAll = () => {
      this.setState({ cityFilter:'', skillFilter:'',availableFilter:'',genderFilter:'',two:'', show_selected_students:false })
@@ -167,8 +174,15 @@ export default class StudentTalent extends Component {
     return (
     <div>
        <div class="multipleFilters">
-          <h3>No filter Selected</h3>
-          { ( this.state.cityFilter? <div className="block city-block">{this.state.cityFilter}
+        { ( this.state.isFilterSelected?
+            <FilterSelected >
+              No Filter Selected
+            </FilterSelected> : null ) 
+        }
+       
+          { ( this.state.cityFilter? <div className="block city-block">
+          
+          {this.state.cityFilter}
            <Button bsStyle="danger" onClick = { this.removeCityFilter}>X</Button>
            </div> : null ) 
           }

@@ -49,6 +49,7 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     <Button onClick={() => setSkillFilter("sql")}>SQL</Button>
                     {/* <Button onClick={() => setSkillFilter("video edior")}>VIDEO EDITOR</Button> */}
                     <Button onClick={() => setSkillFilter("bootsrap")}>BOOTSRAP</Button>
+                    <Button onClick={() => setSkillFilter("ios")}>IOS</Button>
                     
                 </ButtonGroup>
             </Tab.Pane>

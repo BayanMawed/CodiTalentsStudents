@@ -26,7 +26,7 @@ const FilterSelected = ({children}) => {
 
 export default class StudentTalent extends Component {
   state = {
-    isFilterSelected:true,
+    isFilterSelected:false,
     cityFilter: "",
     skillFilter:"",
     availableFilter:"",
@@ -94,26 +94,26 @@ export default class StudentTalent extends Component {
  }
  
    setCityFilter = (cityFilter) => {
-     this.setState({ cityFilter ,two:'', show_selected_students:false,isFilterSelected:false  })
+     this.setState({ cityFilter ,two:'', show_selected_students:false,isFilterSelected:true  })
     };
    removeCityFilter = () => {
     // const cityFilter = this.state.cityFilter
      this.setState({ cityFilter:'' ,two:'', show_selected_students:false })
     };
    setSkillFilter = (skillFilter) => {
-     this.setState({ skillFilter, two:'', show_selected_students:false,isFilterSelected:false })
+     this.setState({ skillFilter, two:'', show_selected_students:false,isFilterSelected:true })
     };
    removeSkillFilter = () => {
      this.setState({ skillFilter:'' ,two:'', show_selected_students:false })
     };
    setAvailabileFilter = (availableFilter) => {
-     this.setState({ availableFilter, two:'', show_selected_students:false,isFilterSelected:false })
+     this.setState({ availableFilter, two:'', show_selected_students:false,isFilterSelected:true })
     };
    removeAvailabileFilter = () => {
      this.setState({ availableFilter:'' ,two:'', show_selected_students:false })
     };
    setgenderFilter = (genderFilter) => {
-     this.setState({ genderFilter, two:'', show_selected_students:false,isFilterSelected:false })
+     this.setState({ genderFilter, two:'', show_selected_students:false,isFilterSelected:true })
     };
    removegenderFilter = () => {
      this.setState({ genderFilter:'' ,two:'', show_selected_students:false, })
@@ -174,11 +174,11 @@ export default class StudentTalent extends Component {
     return (
     <div>
        <div class="multipleFilters">
-        { ( this.state.isFilterSelected?
-            <FilterSelected >
-              No Filter Selected
-            </FilterSelected> : null ) 
-        }
+          { ( this.state.cityFilter || this.state.skillFilter || this.state.availableFilter|| this.state.genderFilter?
+               null : <FilterSelected >
+               No Filter Selected
+            </FilterSelected>  ) 
+          }
        
           { ( this.state.cityFilter? <div className="block city-block">
           

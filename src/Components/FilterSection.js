@@ -7,7 +7,7 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
   <div class="filter">
           
           <div className="searchBar"> 
-              <input  type="text" placeholder="Search for..." onChange={onSearchChange} value={searchValue} />
+              <input  type="text" placeholder="Search" onChange={onSearchChange} value={searchValue} />
           </div>
 
     <Tab.Container id="left-tabs-example" defaultActiveKey="first">

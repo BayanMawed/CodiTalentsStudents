@@ -33,6 +33,7 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     <Button onClick={() => setCityFilter("jbeil")}><h4>Jbiel</h4></Button>
                     <Button onClick={() => setCityFilter("tyre")}><h4>Tyre</h4></Button>
                     <Button onClick={() => setCityFilter("sarafand")}><h4>Sarafand</h4></Button>
+                    <Button onClick={() => setCityFilter("alay")}><h4>Alay</h4></Button>
                 </ButtonGroup>
             </Tab.Pane>
             <Tab.Pane eventKey="second">
@@ -48,6 +49,7 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     <Button onClick={() => setSkillFilter("sql")}>SQL</Button>
                     {/* <Button onClick={() => setSkillFilter("video edior")}>VIDEO EDITOR</Button> */}
                     <Button onClick={() => setSkillFilter("bootsrap")}>BOOTSRAP</Button>
+                    <Button onClick={() => setSkillFilter("ios")}>IOS</Button>
                     
                 </ButtonGroup>
             </Tab.Pane>

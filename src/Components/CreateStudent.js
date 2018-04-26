@@ -17,7 +17,7 @@ const students = [
   create_student('m','adam', '2', ['html','css','javascript'],'jounyeh'),
   create_student('m','ibrahim', 'available', ['php','css','html','laravel'],'jounyeh'),
   create_student('m','ali', 'available', ['node','javascript','react'],'sarafand'),
-  create_student('m','amr', '2', ['html','css','wordpress','js','react'],'beirut'),
+  create_student('m','amr', '1', ['html','css','wordpress','js','react'],'alay'),
   create_student('m','anas', '2', ['html', 'css', 'javascript', 'node', 'react', 'sql' ],'beirut'),
   create_student('m','anthony', 'available', ['php','wordpress','javascript','html','css'],'jounyeh'),
   create_student('f','bayan', '2', ['bootsrap','html','css','javascript'],'saida'),
@@ -30,6 +30,10 @@ const students = [
   create_student('m','saleh', 'available', ['html','css','javascript'],'beirut'),
   create_student('f','souad', 'available', ['html','css','javascript','node','react','meator'],'jbeil'),
   create_student('f','mitza', '2', ['html','css','javascript','react','bootsrap'/*,'video edior'*/],'beirut'),
+  create_student('m','gabi', '3', ['javascript','react','php','laravel','ios'],'jounyeh'),
+  create_student('m','chriss', 'available', ['html','css','javascript','react'],'beirut'),
+  create_student('m','samer', '3', ['html','css','javascript','react'],'saida'),
+  create_student('m','kevin', '1', ['html','css','javascript','react'],'jbiel'),
 ];
 
 export default students;

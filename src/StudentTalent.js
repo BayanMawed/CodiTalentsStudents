@@ -26,7 +26,7 @@ const FilterSelected = ({children}) => {
 
 export default class StudentTalent extends Component {
   state = {
-    isFilterSelected:true,
+    isFilterSelected:false,
     cityFilter: "",
     skillFilter:"",
     availableFilter:"",
@@ -94,39 +94,39 @@ export default class StudentTalent extends Component {
  }
  
    setCityFilter = (cityFilter) => {
-     this.setState({ cityFilter ,two:'', show_selected_students:false,isFilterSelected:false  })
+     this.setState({ cityFilter ,two:'', show_selected_students:false,isFilterSelected:true, search:''  })
     };
    removeCityFilter = () => {
     // const cityFilter = this.state.cityFilter
-     this.setState({ cityFilter:'' ,two:'', show_selected_students:false })
+     this.setState({ cityFilter:'' ,two:'', show_selected_students:false,search:'' })
     };
    setSkillFilter = (skillFilter) => {
-     this.setState({ skillFilter, two:'', show_selected_students:false,isFilterSelected:false })
+     this.setState({ skillFilter, two:'', show_selected_students:false,isFilterSelected:true,search:'' })
     };
    removeSkillFilter = () => {
-     this.setState({ skillFilter:'' ,two:'', show_selected_students:false })
+     this.setState({ skillFilter:'' ,two:'', show_selected_students:false,search:'' })
     };
    setAvailabileFilter = (availableFilter) => {
-     this.setState({ availableFilter, two:'', show_selected_students:false,isFilterSelected:false })
+     this.setState({ availableFilter, two:'', show_selected_students:false,isFilterSelected:true,search:'' })
     };
    removeAvailabileFilter = () => {
-     this.setState({ availableFilter:'' ,two:'', show_selected_students:false })
+     this.setState({ availableFilter:'' ,two:'', show_selected_students:false,search:'' })
     };
    setgenderFilter = (genderFilter) => {
-     this.setState({ genderFilter, two:'', show_selected_students:false,isFilterSelected:false })
+     this.setState({ genderFilter, two:'', show_selected_students:false,isFilterSelected:true,search:'' })
     };
    removegenderFilter = () => {
-     this.setState({ genderFilter:'' ,two:'', show_selected_students:false, })
+     this.setState({ genderFilter:'' ,two:'', show_selected_students:false,search:'' })
     };
    showAll = () => {
-     this.setState({ cityFilter:'', skillFilter:'',availableFilter:'',genderFilter:'',two:'', show_selected_students:false })
+     this.setState({ cityFilter:'', skillFilter:'',availableFilter:'',genderFilter:'',two:'', show_selected_students:false,search:'' })
    };
    showTwo = () => {
-     this.setState({ two:true, cityFilter:'', skillFilter:'',availableFilter:'', show_selected_students:false })
+     this.setState({ two:true, cityFilter:'', skillFilter:'',availableFilter:'', show_selected_students:false,search:'' })
    };
    
   showSelected = () => {
-    this.setState({ show_selected_students:true })
+    this.setState({ show_selected_students:true,search:'' })
    };
 
   AddStudentToList = (student) => {
@@ -174,11 +174,11 @@ export default class StudentTalent extends Component {
     return (
     <div>
        <div class="multipleFilters">
-        { ( this.state.isFilterSelected?
-            <FilterSelected >
-              No Filter Selected
-            </FilterSelected> : null ) 
-        }
+          { ( this.state.cityFilter || this.state.skillFilter || this.state.availableFilter|| this.state.genderFilter?
+               null : <FilterSelected >
+               No Filter Selected
+            </FilterSelected>  ) 
+          }
        
           { ( this.state.cityFilter? <div className="block city-block">
           

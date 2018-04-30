@@ -33,7 +33,7 @@ const students = [
   create_student('m','gabi', '3', ['javascript','react','php','laravel','ios'],'jounyeh'),
   create_student('m','chriss', 'available', ['html','css','javascript','react'],'beirut'),
   create_student('m','samer', '3', ['html','css','javascript','react'],'saida'),
-  create_student('m','kevin', '1', ['html','css','javascript','react'],'jbiel'),
+  create_student('m','kevin', '1', ['angular', 'wordpress', 'react', 'photoshop', 'illustrator'],'beirut'),
 ];
 
 export default students;

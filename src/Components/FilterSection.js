@@ -50,6 +50,9 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     {/* <Button onClick={() => setSkillFilter("video edior")}>VIDEO EDITOR</Button> */}
                     <Button onClick={() => setSkillFilter("bootsrap")}>BOOTSRAP</Button>
                     <Button onClick={() => setSkillFilter("ios")}>IOS</Button>
+                    <Button onClick={() => setSkillFilter("angular")}>ANGULAR</Button>
+                    <Button onClick={() => setSkillFilter("photoshop")}>PHOTOSHOP</Button>
+                    <Button onClick={() => setSkillFilter("illustrator")}>ILLUSTRATOR</Button>
                     
                 </ButtonGroup>
             </Tab.Pane>

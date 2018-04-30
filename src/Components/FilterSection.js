@@ -59,9 +59,10 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
             <Tab.Pane eventKey="third">
                 <ButtonGroup vertical block>
                     <Button onClick={() => setAvailabileFilter("available")}>Available</Button>
-                    <Button onClick={() => setAvailabileFilter("1")}>In less than 1 month</Button>
-                    <Button onClick={() => setAvailabileFilter("2")}>In less than 2 month</Button>
-                    <Button onClick={() => setAvailabileFilter("3")}>3months or more</Button>
+                    <Button onClick={() => setAvailabileFilter("in less than 1 month")}>In less than 1 month</Button>
+                    <Button onClick={() => setAvailabileFilter("in less than 2 months")}>In less than 2 month</Button>
+                    <Button onClick={() => setAvailabileFilter("3 months or more")}>3months or more</Button>
+                    <Button onClick={() => setAvailabileFilter("not available")}>NOT AVAILABLE</Button>
                 </ButtonGroup>
             </Tab.Pane>
             <Tab.Pane eventKey="fourth">

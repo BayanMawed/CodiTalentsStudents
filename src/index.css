@@ -133,7 +133,6 @@ textarea {
 .multipleFilters{
   background-color: rgb(61, 61, 61);
   color: white;
-  border: 3px pink dotted;
   text-align: center;
   height: 105px;
   width: 70%;
@@ -181,4 +180,17 @@ textarea {
 
 .student-name{
   text-transform: capitalize
+}
+.thumbnail{
+  margin-top:30px;
+}
+.student-image{
+margin:auto;
+top:0;
+left:0;
+right:0;
+bottom: 0;
+}
+.searchBar input {
+  width:131px;
 }

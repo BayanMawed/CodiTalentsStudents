@@ -55,9 +55,11 @@ body {
   background-position:50% 50%;
   overflow:hidden;
 }
-
+.caption p{
+  font-size: 16px
+}
 .caption:hover{
-    background-color: rgba(4, 50, 71, 0.5);
+  background-color: #88ceff;
 }
 @media (min-width: 768px){
   .col-sm-8{
@@ -94,9 +96,12 @@ body {
   transform: translate3D(0,0,20px);
   transition: all 300ms ease-in;
 }
+.searchBar{
+  margin-right:11px;
+}
 
 .searchBar input[type=text] {
-  width: 150px;
+  width: 100%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -108,6 +113,7 @@ body {
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   margin-bottom: 10px;
+  
 }
 
 textarea {
@@ -115,21 +121,77 @@ textarea {
   width: 300px;
   height: 150px;
 }
-
-.searchBar input[type=text]:focus {
-  width: 100%;
+.skills{
+  height: 23px;
 }
-@media screen and (max-width:1000px){
+.skills p{
+  height: auto;
+}
+@media screen and (max-width:1200px){
   .col-xs-1{
     width:50%;
   }
-}
-@media screen and (max-width:675px){
-  .col-xs-1{
-  width:100%;
+  .btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    height: 314px;
   }
 }
 
+
+@media screen and (max-width:800px){
+  .col-xs-1{
+  width:80%;
+  margin-left: 5%;
+  }
+  .btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    height: 314px;
+  }
+}
+@media screen and (max-width:513px){
+  .col-xs-1{
+  width:94%;
+  margin-right: 6%;
+  }
+  .btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    height: 314px;
+  }
+}
+@media screen and (max-width:449px){
+  .col-xs-1{
+  width:98%;
+  margin-right: 2%;
+  }
+  .btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    height: 314px;
+  }
+}
+@media screen and (max-width:449px){
+  .col-xs-1{
+  width:100%;
+  }
+  .btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    height: 314px;
+  }
+}
 .multipleFilters{
   background-color: rgb(61, 61, 61);
   color: white;
@@ -179,7 +241,17 @@ textarea {
 }
 
 .student-name{
-  text-transform: capitalize
+  text-transform: capitalize;
+  color: #444;  
+}
+.student-city{
+  color: #444;
+}
+.student-availability{
+  color: #444;
+}
+.student-skills{
+  color: #444;
 }
 .thumbnail{
   margin-top:30px;
@@ -191,6 +263,32 @@ left:0;
 right:0;
 bottom: 0;
 }
-.searchBar input {
-  width:131px;
+.btn-success{
+  float:right;
+  margin-top:-34px;
+  background-color:lightseagreen
+}
+.btn-primary{
+  background-color:lightseagreen;
+}
+.city-block{
+  margin-top:10px;
+  background-color:lightseagreen;
+}
+.skill-block{
+  background-color: lightseagreen;
+}
+.available-block{
+  background-color: lightseagreen;
+}
+.btn-danger{
+  background-color:lightseagreen;
+  border:0;
+}
+.active{
+  border-radius: 8px;
+}
+
+.student-info{
+  text-align: center; 
 }

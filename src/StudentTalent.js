@@ -88,7 +88,7 @@ export default class StudentTalent extends Component {
     const studentList = this.randomStudentList(filteredStudents)
     const finalStudentList = two ? studentList.slice(0,2) : studentList
     const reactStudents = finalStudentList.map(
-      (student) => <Student  OnClickAdd={() => this.AddStudentToList(student)}  image={'/images/'+student.name+'.jpeg'} {...student} key={student.name}/> 
+      (student) => <Student  OnClickAdd={() => this.AddStudentToList(student)}  image={'/images/'+student.imagename+'.jpeg'} {...student} key={student.name}/> 
     )
     return reactStudents;
  }

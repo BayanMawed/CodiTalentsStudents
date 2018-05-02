@@ -13,7 +13,7 @@ export const create_student = (gender,name, availability, skills,city,image) =>
 
 
 const students = [
-  create_student('m','ahmad', 'in less than 2 months', ['react','node','javascript','php','laravel'] ,'beirut'),
+  create_student('m','ahmad', 'in less than 2 months', ['react','node','javascript','php','laravel','html','css'] ,'beirut'),
   create_student('m','adam', 'in less than 2 months', ['html','css','javascript'],'jounyeh'),
   create_student('m','ibrahim', 'available', ['php','css','html','laravel'],'jounyeh'),
   create_student('m','ali', 'available', ['node','javascript','react'],'sarafand'),
@@ -29,7 +29,7 @@ const students = [
   create_student('m','paul', 'in less than 1 month', ['html','wordpress'],'jounyeh'),
   create_student('m','saleh', 'available', ['html','css','javascript'],'beirut'),
   create_student('f','souad', 'available', ['html','css','javascript','node','react','meator'],'jbeil'),
-  create_student('f','mitza', 'in less than 2 months', ['html','css','javascript','react','bootsrap'/*,'video edior'*/],'beirut'),
+  create_student('f','mitza', 'in less than 2 months', ['video editor','adobe premiere','html','css','javascript','react'],'beirut'),
   create_student('m','gabi', '3 months or more', ['javascript','react','php','laravel','ios'],'jounyeh'),
   create_student('m','chriss', 'available', ['html','css','javascript','react'],'beirut'),
   create_student('m','samer', '3 months or more', ['html','css','javascript','react'],'saida'),

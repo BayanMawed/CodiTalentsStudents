@@ -15,7 +15,7 @@ const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
           <p>{availability}</p>
           <h3 className='student-skills'>Skills: </h3>
           <div className="skills">
-            <p>#{skills.join('#')}</p>
+            <p>#{skills.join(' #')}</p>
           </div>
         </div>
         <hr />

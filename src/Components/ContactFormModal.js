@@ -24,7 +24,7 @@ class ContactFormModal extends React.Component {
   
     render() {
       return (
-        <div>
+        <div style={{display:'inline'}}>
           <Button bsStyle="primary" bsSize="medium" onClick={this.handleShow}>
             Contact {this.props.name}
           </Button>

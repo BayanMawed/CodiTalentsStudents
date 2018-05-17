@@ -173,7 +173,24 @@ export default class StudentTalent extends Component {
     
     return (
     <div>
-       <div class="multipleFilters">
+       
+
+      {/* Filter Section contains all the html and buttons begins here */}
+      <div className="filter" style={{width:'100%'}}>
+          
+          <FilterSection 
+          setCityFilter={this.setCityFilter} 
+          setSkillFilter={this.setSkillFilter}
+          setAvailabileFilter={this.setAvailabileFilter} 
+          setgenderFilter={this.setgenderFilter} 
+          showAll={this.showAll} 
+          showSelected={this.showSelected} 
+          showTwo={this.showTwo}
+          searchValue={this.state.search} 
+          onSearchChange={this.onChange}
+          />
+      </div>
+      <div class="multipleFilters" class='text-center'>
           { ( this.state.cityFilter || this.state.skillFilter || this.state.availableFilter|| this.state.genderFilter?
                null : <FilterSelected >
                No Filter Selected
@@ -199,29 +216,13 @@ export default class StudentTalent extends Component {
           </div> : null ) 
           }
       </div>
-
-      {/* Filter Section contains all the html and buttons begins here */}
-      <div className="filter">
-          
-          <FilterSection 
-          setCityFilter={this.setCityFilter} 
-          setSkillFilter={this.setSkillFilter}
-          setAvailabileFilter={this.setAvailabileFilter} 
-          setgenderFilter={this.setgenderFilter} 
-          showAll={this.showAll} 
-          showSelected={this.showSelected} 
-          showTwo={this.showTwo}
-          searchValue={this.state.search} 
-          onSearchChange={this.onChange}
-          />
-      </div>
       {/* Ends here.... */}
 
 
    <div className="student">
    <Grid>
       <Row>
-        <ReactCSSTransitionGroup transitionName={"student"} transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+        <ReactCSSTransitionGroup style={{display: 'flex', flexFlow: 'row wrap',justifyContent: 'center'}} transitionName={"student"} transitionEnterTimeout={500} transitionLeaveTimeout={300}>
           { students_list.length ? students_list : <div class="noResult">
           <h1>no results...</h1>
           <Button onClick={() => this.showAll()} >

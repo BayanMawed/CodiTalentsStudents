@@ -3,7 +3,7 @@ import ContactFormModal from './Components/ContactFormModal';
 import { Button, Thumbnail, Col } from 'react-bootstrap';
 
 const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
-    <Col xs={6} md={4} style = {{minWidth:'300'}}>
+    <Col xs={6} md={4} style={{minWidth:300}}>
       <Thumbnail >
         {/* <Image src={image} width="150px" height="150px" circle /> */}
         <div className='student-image' style={{ backgroundImage: `url(${image})` }} > </div>
@@ -19,11 +19,12 @@ const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
           </div>
         </div>
         <hr />
-        <p>
-        {/* <Button bsStyle="primary">See More</Button>&nbsp; */}
-        <ContactFormModal name={name} />
-        <Button bsStyle="success" onClick={OnClickAdd} style={{float:'right'}}>Add to list</Button>
-        </p>
+        <div>
+          {/* <Button bsStyle="primary">See More</Button>&nbsp; */}
+        
+            <ContactFormModal name={name} />
+            <Button bsStyle="success" onClick={OnClickAdd} style={{float:'right'}}>Add to list</Button>
+        </div>
       </Thumbnail>
     </Col>
   );

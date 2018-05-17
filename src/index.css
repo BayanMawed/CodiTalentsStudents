@@ -11,8 +11,8 @@ body {
 .student{
   margin-top: 8%;
   margin-left: 30%;
-  background-color: rgb(61, 61, 61);
-  width: 70%;
+  background-color:  #000144 ;
+  width: 70%; 
   float: left;
   /* display: inline; */
   /* ; */
@@ -29,7 +29,9 @@ body {
 .filter{
   width: 30%;
   position: fixed;
-  background-color: rgb(165, 165, 165);
+  /* background-color:#000144; */
+  background: linear-gradient(to bottom, #000144 30%,#000155 70%);
+  
   height: 100%;
   float: left;
 }
@@ -40,6 +42,7 @@ body {
     text-decoration: none;
     width: 129px;
     background-color: #eee;
+    
 }
 .nav-stacked>li {
   float: none;
@@ -59,7 +62,7 @@ body {
   font-size: 16px
 }
 .caption:hover{
-  background-color: #88ceff;
+  background-color:#cccce7;
 }
 @media (min-width: 768px){
   .col-sm-8{
@@ -103,7 +106,7 @@ body {
 .searchBar input[type=text] {
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: 2px solid #000289;
   border-radius: 4px;
   font-size: 16px;
   /* background-color: white; */
@@ -193,7 +196,9 @@ textarea {
   }
 }
 .multipleFilters{
-  background-color: rgb(61, 61, 61);
+  /* background-color: #000144; */
+  background: linear-gradient(to bottom, #000144 30%,#000155 70%);
+  
   color: white;
   text-align: center;
   height: 105px;
@@ -213,7 +218,7 @@ textarea {
 .block{
   display: inline-block;
   margin-right: 5px;
-  background-color: rgb(44, 190, 88);
+  background-color:#7f80c4;
   border-radius: 20px;
   font-size: 20px;
   width: 120px;
@@ -266,45 +271,45 @@ bottom: 0;
 .btn-success{
   float:right;
   margin-top:-34px;
-  background-color:lightseagreen;
-  border-color: #f1f1f1;
+  background-color:#D2691E;
+  border-color: #8B4513;
 }
-.btn-primary:focus{
-  border-color: #f1f1f1;
-  background-color:lightseagreen
-}
+/* .btn-primary:focus{
+  border-color: 
+  background-color: darkred;
+} */
 .btn-success:focus{
-  border-color: #f1f1f1;
-  background-color:lightseagreen
+  border-color:darkred;
+  background-color:darkred;
 }
-.btn-primary:hover{
-  background-color: #f1f1f1;
-  border-color: #f1f1f1;
-  color: black;
+ .btn-primary:hover{
+  background-color:#cc0000;
+  border-color:#cc0000;
+  color: white;
   transition: 1s;
-}
+} 
 .btn-success:hover{
-  background-color: #f1f1f1;
-  border-color: #f1f1f1;
-  color: black;
+  background-color:	#EE7600;
+  border-color: 	#EE7600;
+  color: white;
   transition: 1s;
 }
 .btn-primary{
-  background-color:lightseagreen;
-  border-color: #f1f1f1;
+  background-color:darkred;
+  border-color: maroon;
 }
 .city-block{
   margin-top:10px;
-  background-color:lightseagreen;
+  background-color:#000289;
 }
 .skill-block{
-  background-color: lightseagreen;
+  background-color: #000289;
 }
 .available-block{
-  background-color: lightseagreen;
+  background-color: #000289;
 }
 .btn-danger{
-  background-color:lightseagreen;
+  background-color:#000289;
   border:0;
 }
 .active{

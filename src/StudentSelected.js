@@ -16,8 +16,8 @@ const StudentSelected = ({gender,name,availability,skills,city,OnClickRemove,ima
         <hr />
         <p>
         {/* <Button bsStyle="primary">See More</Button>&nbsp; */}
-        <ContactFormModal name={name} />
-        <Button bsStyle="danger" onClick={OnClickRemove}>Remove from list</Button>
+        <ContactFormModal  name={name}/>
+        <Button bsStyle="danger" onClick={OnClickRemove} style={{float:'right'}}>Remove from list</Button>
         </p>
       </Thumbnail>
     </Col>

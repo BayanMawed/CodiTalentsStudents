@@ -5,8 +5,7 @@ import { Button, Thumbnail, Col } from 'react-bootstrap';
 const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
     <Col xs={6} md={4} style={{minWidth:300}}>
       <Thumbnail >
-        {/* <Image src={image} width="150px" height="150px" circle /> */}
-        <div className='student-image' style={{ backgroundImage: `url(${image})` }} > </div>
+         <img src={image} width="150px" height="150px" circle />
         <div className='student-info'>
           <h2 className="student-name">{name}</h2>
           <h3 className="student-city">City: </h3>
@@ -15,15 +14,14 @@ const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
           <p>{availability}</p>
           <h3 className='student-skills'>Skills: </h3>
           <div className="skills">
-            <p>#{skills.join(' #')}</p>
+            <p>{skills.join(',')}</p>
           </div>
         </div>
         <hr />
-        <div>
+        <div className = "buttons">
           {/* <Button bsStyle="primary">See More</Button>&nbsp; */}
-        
             <ContactFormModal name={name} />
-            <Button bsStyle="success" onClick={OnClickAdd} style={{float:'right'}}>Add to list</Button>
+            <Button bsStyle="success" onClick={OnClickAdd}>Add to list</Button>
         </div>
       </Thumbnail>
     </Col>

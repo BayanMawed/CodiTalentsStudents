@@ -1,3 +1,17 @@
-.btn-success{
-    margin-top:-32px;
+img{
+    display:block;
+    margin:auto;
+    border-radius: 100px;
+}
+
+.thumbnail{
+    height: 550px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.student-info{
+    height: 280px;
+    color:#302e40;
 }

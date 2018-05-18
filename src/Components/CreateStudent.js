@@ -14,7 +14,7 @@ export const create_student = (imagename,gender,name, availability, skills,city,
 
 
 const students = [
-  create_student('Ahmad','m','Ahmad', 'in less than 2 months', ['react','node','javascript','php','laravel','html','css'] ,'beirut'),
+  create_student('ahmad','m','Ahmad', 'in less than 2 months', ['react','node','javascript','php','laravel','html','css'] ,'beirut'),
   create_student('adam','m','adam', 'in less than 2 months', ['html','css','javascript'],'jounyeh'),
   create_student('ibrahim','m','ibrahim', 'available', ['php','css','html','laravel'],'jounyeh'),
   create_student('avatar','m','ali', 'available', ['node','javascript','react'],'sarafand'),

@@ -71,3 +71,6 @@ img{
   color: #fff;
   background-color: #ff0b73;
 }
+.student-name{
+  text-transform: capitalize;
+}

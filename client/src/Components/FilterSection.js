@@ -7,9 +7,9 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
 
   <div class="filter">
           
-          <div className="searchBar" style={{float:'right' , width:'20%' }}> 
+          {/* <div className="searchBar" style={{float:'right'  }}> 
               <input  type="text" placeholder="Search" onChange={onSearchChange} value={searchValue} />
-          </div>
+          </div> */}
 
     <Tab.Container id="left-tabs-example" defaultActiveKey="first" >
       <Row className="clearfix"  >

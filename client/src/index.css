@@ -74,3 +74,12 @@ img{
 .student-name{
   text-transform: capitalize;
 }
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+h1{
+  color: white;
+}

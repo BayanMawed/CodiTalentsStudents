@@ -1,19 +1,28 @@
 {
-  "name": "react01",
-  "version": "0.1.0",
-  "private": true,
+  "name": "coditalentsstudents",
+  "version": "1.0.0",
+  "description": "",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-addons-css-transition-group": "^15.6.2",
-    "react-bootstrap": "^0.32.1",
-    "react-css-stagger": "0.0.8",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "concurrently": "^3.5.1"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd back && npm start",
+    "client": "cd client && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "back": "cd back && npm install",
+    "front": "cd client && npm install",
+    "install": "concurrently \"npm run back\" \"npm run front\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadkhoja/CodiTalentsStudents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadkhoja/CodiTalentsStudents/issues"
+  },
+  "homepage": "https://github.com/ahmadkhoja/CodiTalentsStudents#readme"
 }

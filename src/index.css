@@ -24,6 +24,7 @@
 
 .student-info{
   color: #302e40;
+  text-align: center;
 }
 
 .student{
@@ -39,4 +40,34 @@
 }
 .student-name{
 text-align: center;
+}
+img{
+    display:block;
+    margin:auto;
+    border-radius: 100px;
+}
+.btn-danger {
+  color: beige;
+  /* border-color: #d43f3a; */
+  border-radius: 30px;
+  margin-left: 6px;
+  background-color: #ff0b73;
+}
+
+.thumbnail{
+    height: 550px;
+    border-bottom: 4px solid #ff0b73;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.student-info{
+    height: 280px;
+    color:#302e40;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #ff0b73;
 }

@@ -5,7 +5,7 @@ import { Button, Thumbnail, Col } from 'react-bootstrap';
 const Student = ({gender,name,availability,skills,city,OnClickAdd,image}) => (
     <Col xs={6} md={4} style={{minWidth:300}}>
       <Thumbnail >
-        {/* <Image src={image} width="150px" height="150px" circle /> */}
+        <img src={image} width="150px" height="150px" circle />
         <div className='student-image' style={{ backgroundImage: `url(${image})` }} > </div>
         <div className='student-info'>
           <h2 className="student-name">{name}</h2>

@@ -20,6 +20,7 @@ class FormInstance extends Component {
   }
   async handleSubmit(e){
     e.preventDefault()
+    alert('Your message has been submitted Dear ' + this.state.name)
     const myData = {
       name: this.state.name,
       email: this.state.email,

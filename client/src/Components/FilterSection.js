@@ -3,7 +3,7 @@ import React from 'react';
 import { Nav, NavDropdown,MenuItem ,ButtonGroup,NavItem, Row, Tab, Button, Col } from 'react-bootstrap';
 
 
-const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSkillFilter,showAll,showSelected,showTwo,searchValue,onSearchChange}) => (
+const FilterSection = ({setCityFilter,setAvailabileFilter,setSkillFilter,showAll,showSelected,showTwo,searchValue,onSearchChange}) => (
 
   <div class="filter">
           
@@ -55,7 +55,6 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                   <Button onClick={() => setAvailabileFilter("in less than 1 month")}>In less than 1 month</Button>
                   <Button onClick={() => setAvailabileFilter("in less than 2 months")}>In less than 2 month</Button>
                   <Button onClick={() => setAvailabileFilter("3 months or more")}>3months or more</Button>
-                  <Button onClick={() => setAvailabileFilter("not available")}>NOT AVAILABLE</Button>
                 </ButtonGroup>
             </NavDropdown>
             <NavDropdown eventKey={3} title="Show Students" id="basic-nav-dropdown">
@@ -66,15 +65,7 @@ const FilterSection = ({setCityFilter,setAvailabileFilter,setgenderFilter,setSki
                     Show Two
                   </Button>
             </NavDropdown>
-            <NavDropdown eventKey={3} title="Gender" id="basic-nav-dropdown">
-                  <Button onClick={() => setgenderFilter("m")} vertical block>
-                    Male
-                  </Button>
-                  <Button onClick={() => setgenderFilter("f")} vertical block>
-                    Female
-                  </Button>
-            </NavDropdown>
-            <NavDropdown eventKey={3} title="Show List" id="basic-nav-dropdown">
+           <NavDropdown eventKey={3} title="Show List" id="basic-nav-dropdown">
                   <Button onClick={showSelected} vertical block>
                     Show Your List
                   </Button>

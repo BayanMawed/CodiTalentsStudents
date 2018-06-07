@@ -2,7 +2,7 @@ import React from 'react';
 import ContactFormModal from './Components/ContactFormModal';
 import { Button, Thumbnail, Col } from 'react-bootstrap';
 
-const StudentSelected = ({gender,name,availability,skills,city,OnClickRemove,image}) => (
+const StudentSelected = ({name,availability,skills,city,OnClickRemove,image}) => (
     <Col xs={1} md={4}>
       <Thumbnail >
         {/* <Image src={image} width="150px" height="150px" circle /> */}

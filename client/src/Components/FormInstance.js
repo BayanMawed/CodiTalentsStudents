@@ -9,6 +9,7 @@ class FormInstance extends Component {
     this.state={
       name:'',
       email:'',
+      username:'',
       message:'',
     }
     this.handleChange=this.handleChange.bind(this)
@@ -22,6 +23,7 @@ class FormInstance extends Component {
     const myData = {
       name: this.state.name,
       email: this.state.email,
+      username:this.state.username,
       message: this.state.message
     }
     console.log(myData)
@@ -37,6 +39,7 @@ class FormInstance extends Component {
       this.setState({
         name: '',
         email: '',
+        username:'',
         message: ''
       })
     )
@@ -47,6 +50,10 @@ class FormInstance extends Component {
           <FormGroup >
             <Label for="name" >Company Name:</Label>
             <Input type="text" name="name" onChange={this.handleChange} value={this.state.name} />
+          </FormGroup>
+          <FormGroup >
+            <Label for="username" >User Name:</Label>
+            <Input type="text" name="username" onChange={this.handleChange} value={this.state.username} />
           </FormGroup>
           <FormGroup >
             <Label for="email" >Email:</Label>
